@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic light</title>
+</head>
+<body>
+    <script>
+        let traffic_light = prompt("Enter traffic light color");
+        console.log(traffic_light);
+        if(traffic_light == 'green' || traffic_light == 'Green'){
+            document.write("<h1> Go! </h1>")
+        }else if(traffic_light == 'red'){
+            document.write("<h1> Stop! <h1>")
+        }else if(traffic_light == 'yellow'){
+            document.write("<h1> Wait! </h1>")
+        }else{
+            document.write("<h1> Device Error! </h1>")
+        }
+    </script>
+</body>
+</html>
