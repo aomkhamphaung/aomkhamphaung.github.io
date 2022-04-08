@@ -37,14 +37,22 @@
             console.log(name);
             let age = document.querySelector('#age').value;
             console.log(age);
-            data += `<tr>
-                <td>${a++}</td>
+            // data += `<tr>
+            //     <td>${a++}</td>
+            //     <td>${name}</td>
+            //     <td>${age}</td>
+            //     </tr>`
+            // console.log(data);
+            // let tbody = document.querySelector('tbody');
+            // tbody.innerHTML = data;
+
+            let tbody = document.querySelector('tbody');
+            tbody.innerHTML += `<tr>
+                <td>1</td>
                 <td>${name}</td>
                 <td>${age}</td>
                 </tr>`
-            console.log(data);
-            let tbody = document.querySelector('tbody');
-            tbody.innerHTML = data;
+            
         }
     </script>
 </body>
