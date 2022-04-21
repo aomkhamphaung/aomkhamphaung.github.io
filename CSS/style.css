@@ -1,0 +1,176 @@
+h3{
+    text-align: center;
+    font-size: 30px;
+    /* color: gold; */
+    /* color: #96e700; */
+    color: rgb(225, 225, 0);
+}
+small{
+    word-spacing: 25px;
+    letter-spacing: 5px;
+    line-height: 40px;
+    text-align: justify;
+    display: block;
+    text-indent: 40px;
+}
+
+/* Univerasal selector */
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* Tag or element selector */
+h1{
+    text-align: center;
+    text-transform: uppercase;
+     color: royalblue; 
+}
+
+/* Attribute selector */
+/* a[title="google"]{
+    text-decoration: none;
+    color: rgb(52, 255, 106);
+} */
+
+/* ID selector */
+#idselector{
+    color: grey;
+    text-indent: 40px;
+    word-spacing: 10px;
+}
+.class_selector{
+    color: blue;
+    line-height: 20px;
+    letter-spacing: 4px;
+}
+
+/* Descendent selector */
+/* .desc a{
+    color: blue;
+}
+.child > a{
+    color: green;
+} */
+
+/* Pseudo */
+a:link{
+    color: red;
+}
+a:hover{
+    color: chartreuse;
+    letter-spacing: 10px;
+}
+a:active{
+    color: orangered;
+}
+a:visited{
+    color: rgb(9, 84, 9);
+}
+
+/* Target */
+:target{
+    color: red;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-size: large;
+    font-style: italic;
+}
+
+/* Border */
+.border1{
+    border: 1px solid royalblue;
+}
+.border2{
+    border-left: 5px solid black;
+    border-bottom: 2px dashed royalblue;
+}
+.bwidth{
+    border-width: thin;
+    border-style: dashed;
+}
+.bstyle{
+    border-style: solid;
+}
+.bmix{
+    /* border-style: solid dashed; */
+    /* T & B , L & R */
+    /* border-style: dashed solid dotted; */
+    /* T, R & L, B */
+    border-style: dashed solid dotted double;
+    /* T, R, B , L */
+}
+
+/* Margin */
+.margin{
+    border: 1px solid royalblue;
+    margin: 50px;
+}
+.margin2{
+    border: 1px dotted darkcyan;
+    margin-left: 70px;
+}
+
+/* Padding */
+.padding{
+    padding: 40px;
+    border: 2px dashed darkolivegreen;
+}
+
+/* Inline */
+.inline{
+    border: 1px solid royalblue;
+    display: inline-block;
+    width: 200px;
+}
+
+/* Block */
+.block{
+    border: 1px solid darkgoldenrod;
+    width: 150px;
+    display: inline-block;
+}
+
+/* Float */
+.float_left img{
+    width: 40%;
+    float: left;
+}
+.clear{
+    clear: both;
+}
+.float_right img{
+    width: 40%;
+    float: right;
+}
+
+/* Grid */
+.gridone div, .gridtwo div, .gridthree div, .gridfour div, .gridfive div, .gridsix div{
+    padding: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+.gridone, .gridtwo, .gridthree, .gridfour, .gridfive, .girdsix{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.gridtwo{
+    grid-column-gap: 40px;
+}
+.gridthree{
+    grid-row-gap: 40px;
+}
+.gridfour{
+    /* grid-gap: 40px; */
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+}
+.addcol{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.addrow{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
