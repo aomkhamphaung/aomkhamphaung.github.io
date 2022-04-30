@@ -174,3 +174,49 @@ a:visited{
     grid-row-start: 1;
     grid-row-end: 3;
 }
+
+/* Position */
+.relative_parents{
+    border: 1px solid red;
+    width: 1000px;
+    height: 400px;
+}
+.relative{
+    border: 1px solid black;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    left: 20px;
+    top: 30px;
+}
+.absolute_parents{
+    border: 1px solid green;
+    width: 1000px;
+    height: 400px;
+    position: relative;
+}
+.absolute{
+    border: 1px solid orange;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 70px;
+}
+
+/* fonts style */
+.online{
+    font-family: 'Water Brush', cursive;
+}
+@font-face {
+    font-family: mysoul;
+    src: url(My_soul/My_Soul/MySoul-Regular.ttf);
+}
+.offline{
+    font-family: mysoul;
+}
