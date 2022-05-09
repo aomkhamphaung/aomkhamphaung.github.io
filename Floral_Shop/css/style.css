@@ -108,7 +108,7 @@
 .divide{
     width: 100px;
     margin: auto;
-     border: 1px solid #3797b9; 
+    border: 1px solid #3797b9; 
     text-align: center;
     margin-bottom: 50px;
     color: #3797b9;
@@ -199,3 +199,401 @@
 .packaging_header{
     margin-top: 20px;
 }
+
+.clear{
+    clear: both;
+}
+
+/* Service */
+
+.service{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 30px;
+    margin-top: 80px;
+    background-color: #edf1f3;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.service_text{
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.service_text b{
+    font-size: 20px;
+}
+
+/* Footer */
+
+.footer{
+    background-color: #212529;
+}
+
+.footer_nav{
+    text-decoration: none;
+    color: #edf1f3;
+    display: inline-block;
+    padding-top: 50px;
+    margin: 20px 20px;
+}
+
+.design_by{
+    color: #edf1f3;
+}
+
+.footer_icon{
+    color: #edf1f3;
+    display: inline-block;
+    margin: 10px 20px 0px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+/* Contact */
+
+.contact h1{
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.contact_items{
+    display: grid;
+    grid-template-columns: 235px 235px 235px 235px;
+    text-align: center;
+    margin-top: 80px;
+    grid-column-gap: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.contact_items div{
+    background-color: #f6f7f7;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.contact_items div p{
+    font-family: lobster;
+    font-weight: bold;
+}
+
+/* Message */
+
+.message{
+    display: grid;
+    grid-template-columns: 500px auto;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.font{
+    font-family: lobster;
+}
+
+.message h1{
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="textarea"]{
+    width: 100%;
+    height: 35px;
+}
+
+#message{
+    width: 100%;
+    height: 100px;
+}
+
+.contact_label{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.send{
+    float: right;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.send:hover{
+    cursor: pointer;
+    background-color: #acd9e9;
+    color: #212529;
+    border: 1px solid #acd9e9;
+    border-radius: 5px;
+}
+
+.message div iframe{
+    margin-top: 75px;
+    margin-left: 100px;
+}
+
+/* Shop */
+
+.shop, .blog, .contact, .about_us{
+    background-color: #edf1f3;
+}
+
+.shop p{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.shop h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.shop_header{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.boquet, .basket, .vase{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    grid-gap: 40px;
+}
+
+.shop_img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0,.17);
+    height: 331px;
+}
+
+.shop_img:hover{
+    cursor: pointer;
+    box-shadow: 5px 10px 20px rgb(0,0,0,.3);
+}
+
+/* Order */
+
+.order_divider{
+    margin-top: 30px;
+    border: 1px solid #acd9e9;
+}
+
+.order h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: lobster;
+    text-align: center;
+}
+
+.order_form{
+    width: 50%;
+    padding-top: 20px;
+    margin-left: 320px;
+    background-color: #f6f7f7;
+    border-radius: 20px;
+    font-family: lobster;
+    font-size: large;
+    display: inline-block;
+}
+
+ input[type="text"], input[type="number"], input[type="email"], input[type="date"]{
+    width: 98%;
+    height: 35px;
+}
+
+input[type="checkbox"]:checked + label{
+    padding: 20px;
+    letter-spacing: 5px;
+}
+
+#address{
+    width: 98%;
+    height: 50px;
+}
+
+.thanks{
+    text-align: center;
+    color: #212529;
+    font-family: lobster;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.order_btn{
+    padding: 10px 20px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+
+.order_btn:hover{
+    cursor: pointer;
+    background-color: #acd9e9;
+    color: #212529;
+    border: 1px solid #acd9e9;
+    border-radius: 5px;
+}
+
+/* Blog */
+
+.blog_header, .au_header{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.blog1, .blog2, .blog3{
+    padding-top: 30px;
+    margin-bottom: 100px;
+}
+
+.blog1 h1, .blog2 h1, .blog3 h1{
+    position: relative;
+    left: 50px;
+    color: #3797b9;
+}
+
+.fa-right-long{
+    padding-right: 20px;
+}
+
+.blog1_img, .blog3_img{
+    width: 40%;
+    height: 300px;
+    float: left;
+    margin-left: 50px;
+}
+
+.blog p{
+    position: relative;
+    left: 50px;
+    width: 90%;
+    top: 20px;
+    line-height: 30px;
+    font-size: large;
+    font-style: italic;
+    text-align: justify;
+}
+
+.blog2_img{
+    width: 40%;
+    height: 300px;
+    float: right;
+    margin-left: 50px; 
+    padding-right: 50px;
+    padding-left: 50px; 
+}
+
+/* Comment */
+
+.comment{
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 2px solid #3797b9;
+    margin: 50px 250px;
+    border-radius: 8px;
+    border-color: #edf1f3;
+}
+
+.comment_img{
+    width: 300px;
+    height: 330px;
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.comment h2{
+    text-align: center;
+    padding: 20px;
+    font-family: lobster;
+}
+
+.comment_text{
+    width: 75%;
+    padding-left: 50px;
+    font-family: lobster;
+    font-size: 20px;
+}
+
+#comment{
+    width: 100%;
+    height: 100px;
+   margin-bottom: 20px;
+}
+
+.comment_label{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.comment_btn{
+    padding: 8px 10px;
+    display: inline-block;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.comment_btn:hover{
+    cursor: pointer;
+    background-color: #acd9e9;
+    color: #212529;
+    border: 1px solid #acd9e9;
+    border-radius: 5px;
+}
+
+/* About Us */
+
+.about_us{
+    padding: 30px 0px;
+}
+
+.cover{
+    margin-bottom: 30px;
+}
+
+.cover h2{
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: lobster;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.au_image{
+    margin-left: 100px;
+    float: left;
+    width: 40%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.cover p{
+    position: relative;
+    left: 50px;
+    width: 90%;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 18px;
+    word-spacing: 5px;
+}
+
+.spring{
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: lobster;
+    border: 2px dashed palegoldenrod;
+    display: inline-block; 
+    padding: 10px 20px;
+    margin-left: 257px;
+} 
+
+.spring:hover{
+    cursor: pointer;
+}
+
+.sale_img{
+    width: 600px;
+    height: 300px;
+    margin-top: 50px;
+} 
