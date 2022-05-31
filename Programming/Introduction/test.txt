@@ -1,0 +1,16 @@
+variable scope
+
+local scope
+    -parameters, local variable
+
+global scope
+    -global variable
+
+- Assignment
+
+1. declare
+2. input from user
+3. set hour = input/3600 (1)
+4. set minute = (input % 3600) / 60 (1)
+5. set second = (input%3600) % 60
+6. display output ( h m s)
