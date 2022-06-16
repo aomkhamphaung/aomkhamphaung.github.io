@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.green-color{
+    font-size: 50px;
+    color: #004241;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#517e86c4, #949fdf1a), url(Website\ Images/banner1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #004241;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+nav  .fas {
+    font-size: 40px;
+    color: white;
+}
+.nav-links{
+    text-align: right;
+    flex: 1;
+    padding: 8px 12px;
+
+}
+.nav-links ul li{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+    text-transform: uppercase;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-right: 10px ;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+}
+.nav-links ul li::after{
+    width: 0;
+    content: '';
+    height: 2.5px;
+    display: block;
+    background-color:#004241 ;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    text-align: center;
+}
+.text-box h2{
+    font-size: 50px;
+    color: #004241;
+}
+.text-box #headtext{
+    font-size: 40px;
+    color: white;
+    padding: 3px;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    color: black!important;
+    border: 1px solid #004241!important;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 30px;
+    background: #fff; 
+    cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid white!important;
+    background: #004241;
+    transition: 1s;
+}
+ nav .fa{
+    display: none;
+}
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px;
+}
+
+.course p{
+    font-size: 10px;
+    color: #563E6C;
+    line-height: 22px;
+    padding: 10px;
+}
+.col{
+    box-sizing: border-box;
+    border-radius: 10%;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    background-color: #00424157;
+    border: black;
+}
+.col h4{
+    text-align: center;
+    margin: 10px;
+}
+.col:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+ .campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+} 
+ .campus-col{
+    border-radius: 10%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    flex-basis: 32%;
+} 
+.campus p{
+    font-size: 20px;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+}
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.facilities-col{
+    border-radius: 10%;
+    margin-bottom: 5%;
+    text-align: left;
+    flex-basis: 32%;
+}
+.facilities-col h3{
+    color: #563E6C;
+}
+.facilities-col p{
+    color: #563E6C;
+    font-size: 12px!important;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities p{
+    font-size: 20px;
+    color: #563E6C;
+    line-height: 22px;
+    padding: 0px;
+}
+
+.footer{
+    text-align: center;
+    padding: 30px 0px; 
+} 
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+}  
+.footer p{
+    font-size: 10px;
+}
+.footer a{
+    text-decoration: none;
+    color: #563E6C;
+}
+.footer a:hover{
+    color: #004241;
+}
+.footer .fab{
+    color: #004241;
+    margin: 0px 15px;
+    cursor: pointer;
+    padding: 15px 0px;
+}
+.footer .fab:hover{
+    color: #563E6C;
+}
+.row img{
+    border-radius: 10%;
+}
+.row h2{
+    text-align: center;
+    font-size: 28px;
+    color: #563E6C;
+    text-transform: uppercase;
+}
+.row p{
+    font-size: 15px;
+    text-align: left;
+    color: #563E6C;
+}
+.row .btn{
+    display: flex;
+}
+.about-us{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.form{
+    background-color: #004241;
+    justify-content: center;
+    align-items: center;
+}
+.row1 .btn{
+    display: inline-block;
+}
+.enroll-now h3{
+    font-size: 30px;
+    color: #563E6C;
+    padding-bottom: 20px;
+}
+.enroll-box{
+    background-color: #065a5962;
+    border-radius: 3%;
+}
+.major h3{
+    color: #563E6C;
+    font-size: 40px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+.row2{
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+.col-sm-10{
+    padding: 10px;
+}
+.col-sm-10 :hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+.major p{
+    font-size: 15px;
+    color: #563E6C;
+}
