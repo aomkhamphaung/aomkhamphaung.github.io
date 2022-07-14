@@ -6,26 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day-4 Assignment 1</title>
     <style>
-        
+        .form{
+            margin: auto;
+            padding-top: 10px;
+            width: 400px;
+            height: 250px;
+            background-color: aquamarine;
+            font-size: 23px;
+            text-align: left;
+            padding-left: 20px;
+            border-radius: 5%;
+        }
+
+        input[type = "text"]{
+            width: 90%;
+            height: 30px;
+        }
+
+        input[type = "checkbox"]:checked + label{
+            font-style: italic;
+        }
+
+        .btn{
+            padding: 8px;
+            margin-left: 150px;
+            font-size: 18px;
+        }
+
+        .btn:hover{
+            background-color: aqua;
+            color: black;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
     </style>
 </head>
 <body>
+    <h1 style="text-align: center; color: aqua;">Hobbies Assignment</h1>
+
     <form action="" class="form">
-        <label for="name">Enter your name</label><br>
-        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <label for="name">Enter your name:</label><br>
+        <input type="text" name="name" id="name" placeholder="Name"><br><br>
 
         <label for="hobbies">Hobbies:</label><br>
 
-        <input type="checkbox" name="reading" id="reading">
+        <input type="checkbox" name="reading" id="reading" value="reading">
         <label for="reading">Reading</label>
 
-        <input type="checkbox" name="guitar" id="guitar">
+        <input type="checkbox" name="guitar" id="guitar" value="playing guitar">
         <label for="guitar">Playing Guitar</label>
 
-        <input type="checkbox" name="game" id="game">
-        <label for="game">Game</label><br>
+        <input type="checkbox" name="game" id="game" value="playing game">
+        <label for="game">Game</label><br><br>
 
-        <input type="submit" value="save">
+        <input type="submit" value="save" class="btn">
     </form>
     
     <script src="jquery-min.js"></script>
@@ -33,10 +67,24 @@
         $(function(){
             $("form").on("submit",function(event){
                 event.preventDefault();
-                var name = $("input[type = 'text']").val
-                var reading = $("name = 'reading']").val
-                var guitar = $("input[name = 'guitar']").val
-                var game = $("input[name = 'game']").val
+                var name = $("input[type = 'text']").val()
+                var reading = $("#reading:checked").val()
+                var guitar = $("#guitar:checked").val()
+                var game = $("#game:checked").val()
+
+                var data = `My name is ${name} and my hobbies are: `
+
+                if(reading){
+                    data += `${reading}: `
+                }
+                if(guitar){
+                    data += `${guitar}: `
+                }
+                if(game){
+                    data += `${game}.`
+                }
+
+                alert(data)
             })
         })
     </script>
