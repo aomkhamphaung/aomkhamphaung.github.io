@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events assignment</title>
+</head>
+<body>
+    <form action="" >
+        <label for="name">Enter name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="age">Enter age: </label>
+        <input type="number" name="age" id="age"><br>
+
+        <input type="radio" name="status" id="single" value="0" checked>
+        <label for="single">Single</label>
+
+        <input type="radio" name="status" value="1" id="married">
+        <label for="married">Married</label><br>
+
+        <div class="spouse">
+        <label for="name">Spouse's name: </label>
+        <input type="text" name="spouse" id="spouse">
+        </div>
+
+        <input type="submit" value="Save">
+    </form>
+    
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            $(".spouse").hide();
+
+            $("#married").on("click", function(){
+                $(".spouse").show()
+            })
+
+            $("#single").on("click", function(){
+                $(".spouse").hide()
+            })
+
+            $("form").on("submit", function(event){
+                event.preventDefault();
+                var name = $("input[name = 'name']").val()
+                var age = $("input[name = 'age']").val()
+                var status = $("input[name = 'status']:checked").val()
+
+                //console.log(`${name}, ${age}, ${status}`)
+                var data = "";
+
+                if(status == 1){
+                    var spouse = $("input[name = 'spouse']").val()
+                    data += `My name is ${name} and ${age} years old. I am married and my spouse name is ${spouse}`
+                }else if(status == 0){
+                    data += `My name is ${name} and ${age} years old. I am single.`
+                }
+
+                alert(data)
+            })
+        })
+    </script>
+</body>
+</html>

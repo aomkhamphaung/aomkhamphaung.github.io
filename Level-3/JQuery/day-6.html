@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6</title>
+    <style>
+        .active{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p class="myp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatum veritatis voluptates porro quam fugit! Est omnis fuga incidunt voluptas obcaecati in totam? Obcaecati possimus quam ut inventore hic sit!</p>
+
+    <a href="http://google.com" class="mya">Google</a>
+
+    <button class="addbtn">Add</button>
+    <button class="removebtn">Remove</button>
+    <button class="change">Change</button><br><br>
+
+    <form action="">
+        <input type="number" name="total" id="total"><br>
+        <input type="number" name="pay" id="pay"><br>
+        <input type="number" name="change" id="change"><br><br>
+        <input type="submit" value="OK">
+    </form>
+    
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            $(".addbtn").on("click", function(){
+                var myp = $(".myp")
+                // myp.css({
+                //     color: "red"
+                //     fontSize: 20px
+                // })
+                myp.addClass("active") 
+            })
+            $(".removebtn").on("click", function(){
+                var myp = $(".myp")
+                myp.removeClass("active")
+            })
+            $(".change").on("click", function(){
+                var mya = $(".mya")
+                var href = mya.attr('href')
+                console.log(href)
+                mya.attr('href', 'http://facebook.com')
+                // mya.text('Facebook')
+                mya.html('<i>Facebook</i>')
+            })
+
+            $("input[name = change]").on("focus", function(){
+                var total = $("input[name = total]").val()
+                var pay = $("input[name = pay]").val()
+                var change = pay - total
+                $(this).val(change)
+            })
+        })
+    </script>
+</body>
+</html>

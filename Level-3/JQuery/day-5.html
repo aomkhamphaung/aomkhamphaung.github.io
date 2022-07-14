@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5</title>
+</head>
+<body>
+    <h2>Effects</h2>
+    <p class="myp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto molestiae alias temporibus et suscipit id impedit ea nam odit eos nihil ad laboriosam, necessitatibus itaque saepe repudiandae quo labore?</p><br><br>
+
+    <div style="width: 100px; height: 100px; background-color: red; position: relative;" class="box">Box</div><br><br>
+
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="toggle">Toggle</button>
+
+    <button class="fadeout">FadeOut</button>
+    <button class="fadein">FadeIn</button>
+    <button class="fadetoggle">FadeToggle</button>
+    <button class="fadeto">FadeTo</button>
+
+    <button calss="slideup">SlideUp</button>
+    <button class="slidedown">SlideDown</button>
+    <button class="slidetoggle">SlideToggle</button>
+
+    <button class="animate">Animate</button>
+    
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            var myp = $(".myp")
+            var box = $(".box")
+
+            $(".hide").on("click", function(){
+                myp.hide();
+            })
+            $(".show").on("click", function(){
+                myp.show();
+            })
+            $(".toggle").on("click", function(){
+                myp.toggle();
+            })
+
+            //fade in/out
+            $(".fadeout").on("click", function(){
+                myp.fadeOut();
+            })
+            $(".fadein").on("click", function(){
+                myp.fadeIn();
+            })
+            $(".fadetoggle").on("click", function(){
+                myp.fadeToggle();
+            })
+            $(".fadeto").on("click", function(){
+                box.fadeTo("slow", 0.2);
+            })
+
+            //sliding
+            $(".slideup").on("click", function(){
+                myp.slideUp();
+            })
+            $(".slidedown").on("click", function(){
+                myp.slideDown();
+            })
+            $(".slidetoggle").on("click", function(){
+                myp.slideToggle();
+            })
+
+            //Animation
+            $(".animate").on("click", function(){
+                box.animate({
+                    left: "250px"
+                });
+            })
+
+        })
+    </script>
+</body>
+</html>

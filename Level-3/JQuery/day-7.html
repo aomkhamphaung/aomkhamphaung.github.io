@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-7</title>
+</head>
+<body>
+    <button class="btncreate">Create</button>
+
+    <div id="memes">
+
+    </div>
+
+    <button class="mybtn" data-url="myimageul" data-name="photoname" data-box="4">My Btn</button>
+
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function () {
+            $.get( "https://api.imgflip.com/get_memes", function( resp ) {
+                // console.log( resp ); // server response
+                if(resp.success){
+                    console.log(resp.data.memes)
+                    var memes = resp.data.memes;
+                    var data="";
+                    for (const row of memes) {
+                        data+=`<img src="${row.url}" alt="${row.name}" width="100">`
+                    }
+                    $("#memes").html(data)
+                }
+            });
+
+            $(".btncreate").on("click",function () {
+                $.post("https://api.imgflip.com/caption_image",{
+                    template_id: "181913649",
+                    username: "aom_kham_phaung",
+                    password: "A235k2004p@",
+                    text0: "Hi",
+                    text1: "Hello"
+                }, function (resp) {
+                    // console.log(resp)
+                    if(resp.success){
+                        var image = `<img src="${resp.data.url}" width="500">`
+                        $("#memes").html(image)
+                    }
+                })
+            })
+
+            $(".mybtn").on("click",function () {
+                var url = $(this).data("url");
+                var name = $(this).data("name");
+                var count = $(this).data("box");
+
+                console.log(`${url}, ${name}, ${count}`)
+            })
+        })
+    </script>
+</body>
+</html>

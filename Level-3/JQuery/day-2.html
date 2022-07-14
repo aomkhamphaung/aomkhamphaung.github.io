@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2 Selectors</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores aliquid culpa assumenda quod, autem necessitatibus molestias veritatis? Magni repellendus possimus corporis maiores molestias. Repellat vero aliquid iusto quae laboriosam.</p>
+    <p>This is second p tag.</p>
+    <h2 class="name">Aom Kham Phaung</h2>
+    <h2 class="name">AKP </h2>
+
+    <button id = "mybtn">Click me</button>
+
+    <ul>
+        <li>First year</li>
+        <li>Second year</li>
+        <li>Third year</li>
+    </ul>
+
+    <section>
+        <ul class="people">
+            <li>Mg Mg</li>
+            <li>Su Su</li>
+            <li>Ma Ma</li>
+        </ul>
+    </section id = "content">
+
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            //Element selector
+            var p = $("p");
+            console.log(p);
+
+            //class selector
+            var c = $(".name");
+            console.log(c);
+
+            //id selector
+            var d = $("#mybtn");
+            console.log(d);
+            if(d.length){
+                console.log("Have button");
+            }
+
+            //with element and class
+            var ec = $("h2.name");
+            console.log(ec);
+
+            //first li of first ul
+            var f = $("ul li:first");
+            console.log(f);
+
+            //parent child selector
+            var pc = $("#content ul.people li");
+            console.log(pc);
+
+        })
+    </script>
+</body>
+</html>

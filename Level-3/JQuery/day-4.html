@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-4</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Enter name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="catagory">Choose catagory: </label>
+        <select name="catagory" id="catagory">
+            <optgroup label="choose catagory">
+                <option value="1">Fashion</option>
+                <option value="2">Furniture</option>
+                <option value="3">Electronic</option>
+                <option value="4">Food</option>
+            </optgroup>
+        </select><br>
+
+        <label for="discount">Discount</label>
+        <input type="number" name="discount" id="discount" readonly value="15"><br>
+
+        <input type="submit" value="save">
+    </form>
+
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            $("select[name = 'catagory']").on("change", function(){
+                //alert("ok")
+                var selected = $("this").val()
+                //alert(selected)
+                
+                if(selected == 1){
+                    discount = 15
+                }
+                else if(selected == 2){
+                    discount = 20
+                }
+                else if(selected == 3){
+                    discount == 10
+                }
+                else if(selected == 4){
+                    discount == 11
+                }
+                $("input[name = 'discount']").val(discount)
+
+            })
+
+            $(form).on("submit", function(event){
+                event.preventDefault();
+                var name = $("input[name = 'name']").val()
+                var catagory = $("select[name = 'catagory']").val()
+
+                console.log(`${name}, ${catagory}`)
+            })
+        })
+    </script>
+</body>
+</html>
