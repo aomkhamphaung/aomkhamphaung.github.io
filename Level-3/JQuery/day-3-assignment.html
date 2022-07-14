@@ -5,28 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events assignment</title>
+    <style>
+        .form{
+            background-color: plum;
+            width: 200px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 20px;
+            border-radius: 20px;
+            justify-content: center;
+            margin: auto;
+        }
+        .container{
+            height: 270px;
+        }
+
+        .btn{
+            padding: 5px;
+            display: inline-block;
+            margin-left: 65px;
+            margin-top: 10px;
+        }
+
+        .btn:hover{
+            color: white;
+            background-color: plum;
+            border: 1px solid white;
+            border-radius: 10%;
+        }
+    </style>
 </head>
 <body>
-    <form action="" >
-        <label for="name">Enter name: </label>
-        <input type="text" name="name" id="name"><br>
+    <h1 style="text-align: center; color: plum;">Event Assignment</h1>
+    
+    <div class="form">
+    <form action="" class="container">
+        <label for="name">Enter name: </label><br>
+        <input type="text" name="name" id="name"><br><br>
 
-        <label for="age">Enter age: </label>
+        <label for="age">Enter age: </label><br>
         <input type="number" name="age" id="age"><br>
 
         <input type="radio" name="status" id="single" value="0" checked>
         <label for="single">Single</label>
 
         <input type="radio" name="status" value="1" id="married">
-        <label for="married">Married</label><br>
+        <label for="married">Married</label><br><br>
 
         <div class="spouse">
-        <label for="name">Spouse's name: </label>
-        <input type="text" name="spouse" id="spouse">
+        <label for="name">Spouse's name: </label><br>
+        <input type="text" name="spouse" id="spouse"><br>
         </div>
 
-        <input type="submit" value="Save">
+        <input type="submit" value="Save" class="btn">
     </form>
+    </div>
     
     <script src="jquery-min.js"></script>
     <script>

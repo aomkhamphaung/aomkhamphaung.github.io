@@ -105,15 +105,6 @@ $(function(){
     //     getData()
     // })
 
-    // $("#cartitems").on("click", "delebtn", function(){
-    //     var index = $(this).data('index');
-    //     var cartStr = localStorage.getItem('cart');
-    //     var cartStr = JSON.parse('cartStr');
-    //     cartArr.splice(index, 1);
-    //     localStorage.setItem('cart', JSON.stringify(cartArr));
-    //     getData();
-    // })
-
     function numberFormat(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
