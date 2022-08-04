@@ -13,11 +13,11 @@
         <h2 style="text-align: center;">BMI Calculator</h2>
         <div style="text-align: center;" id="app">
             <label for="height">Enter your height: </label>
-            <input type="text" name="height" id="height" v-model="height" placeholder="Enter your height in feet.">
-            <input type="text" name="height" id="height" v-model="height1" placeholder="Enter your height in inches.">
+            <input type="text" name="height" id="height" v-model="height" placeholder="feet.(ft)">
+            <input type="text" name="height" id="height" v-model="height1" placeholder="inches.(in)">
             <br><br>
             <label for="weight">Enter your weight: </label>
-            <input type="text" name="weight" id="weight" v-model="weight" placeholder="Enter your weight in pounds.">
+            <input type="text" name="weight" id="weight" v-model="weight" placeholder="pounds.(lb)">
             <br><br>
             <button @click="calculatebmi = 703 * weight / ((height*12 + height1) * (height*12 + height1)) * 100">Calculate BMI</button>
             <br>
