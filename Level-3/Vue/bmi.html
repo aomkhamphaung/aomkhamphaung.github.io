@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">BMI Calculator</h2>
+        <div style="text-align: center;" id="app">
+            <label for="height">Enter your height: </label>
+            <input type="text" name="height" id="height" v-model="height" placeholder="Enter your height in feet.">
+            <input type="text" name="height" id="height" v-model="height1" placeholder="Enter your height in inches.">
+            <br><br>
+            <label for="weight">Enter your weight: </label>
+            <input type="text" name="weight" id="weight" v-model="weight" placeholder="Enter your weight in pounds.">
+            <br><br>
+            <button @click="calculatebmi = 703 * weight / ((height*12 + height1) * (height*12 + height1)) * 100">Calculate BMI</button>
+            <br>
+            <h2>BMI Categories</h2>
+            <h3 style="color: blue;">Underweight: <=18.4</h3>
+            <h3 style="color: green;">Normal weight: 18.5 ~ 24.9</h3>
+            <h3 style="color: orange;">Overweight: 25.0 ~ 39.9</h3>
+            <h3 style="color: red;">Obese: >=40.0</h3>
+            <br>
+            <div v-if="calculatebmi">
+                <div v-if="calculatebmi < 18.4">
+                    <span v-html="result1"></span>
+                </div>
+                <div v-if="calculatebmi > 18.5 && calculatebmi < 24.9">
+                    <span v-html="result2"></span>
+                </div>
+                <div v-if="calculatebmi > 25.0 && calculatebmi < 39.9">
+                    <span v-html="result3"></span>
+                </div>
+                <div v-if="calculatebmi >= 40.0">
+                    <span v-html="result4"></span>
+                </div>
+            </div>
+            <div v-else>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const mountedApp = app2.mount("#app");
+    </script>
+</body>
+</html>

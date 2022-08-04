@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes generator</title>
+</head>
+<body>
+    <h1 style="text-align: center;">MEMES Generator</h1>
+    <div id="memes">
+
+    </div>
+
+    <script src="jquery-min.js"></script>
+    <script>
+        $(function(){
+            $.get( "https://api.imgflip.com/get_memes", function( resp ) {
+                // console.log( resp ); // server response
+                if(resp.success){
+                    console.log(resp.data.memes)
+                    var memes = resp.data.memes;
+                    var data="";
+                    for (const row of memes) {
+                        data+=`<img src="${row.url}" alt="${row.name}" width="100">`
+                    }
+                    $("#memes").html(data)
+                }
+            });
+        })
+    </script>
+</body>
+</html>
