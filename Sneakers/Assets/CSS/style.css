@@ -1,0 +1,68 @@
+.customnav-color{
+    background-color: #2f333a;
+}
+
+.main-color{
+    color: #eb3e3b;
+}
+
+.mainbg-color{
+    color: #eb3e3b;
+}
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.carousel-item img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+.btn-custom{
+    background-color: #eb3e3b !important;
+    color: #fff !important;
+}
+
+.btn-custom:hover{
+    background-color: #bc3228 !important;
+    color: #fff !important;
+    border-color: #bc3228 !important;
+}
+
+#newsletter{
+    background: url(../Images/image/slide3.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.gray-color{
+    color: #999;
+}
+
+.facebook{
+    color: #3c5b9b;
+}
+
+.twitter{
+    color: #40c1df;
+}
+
+.instagram{
+    color: #c619b8;
+}
+
+.googleplus{
+    color: #ed3c32;
+}
+
+.dribbble{
+    color: #c72987;
+}
+
+.tiktok{
+    color: #000000;
+}
+
+.pinterest{
+    color: #E60023;
+}
