@@ -31,7 +31,7 @@
                 <div v-if="calculatebmi < 18.4">
                     <span v-html="result1"></span>
                 </div>
-                <div v-if="calculatebmi > 18.5 && calculatebmi < 24.9">
+                <div v-if="calculatebmi > 18.4 && calculatebmi < 24.9">
                     <span v-html="result2"></span>
                 </div>
                 <div v-if="calculatebmi > 25.0 && calculatebmi < 39.9">
@@ -40,9 +40,6 @@
                 <div v-if="calculatebmi >= 40.0">
                     <span v-html="result4"></span>
                 </div>
-            </div>
-            <div v-else>
-                <p></p>
             </div>
         </div>
     </div>
