@@ -84,3 +84,54 @@ const app4 = Vue.createApp({
         }
     }
 });
+
+const app5 = Vue.createApp({
+    data() {
+        return {
+            status: true,
+            name: 'Aom Kham Phaung',
+            items: Array(),
+        }
+    },
+    mounted() {
+        // this.name = this.name.split('').reverse().join('')
+        // console.log('the component is mounted')
+
+        axios.get("https://api.imgflip.com/get_memes")
+        .then(response =>{
+            console.log(response.data)
+            if(response.data.success == true){
+                this.items = response.data.data.memes
+            }
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+    },
+    methods: {
+
+    }
+})
+
+const app6 = Vue.createApp({
+    data(){
+        return{
+            students: [
+                {name: 'Mg Mg', age: 17, gender: 'male'},
+                {name: 'Ma Ma', age: 18, gender: 'female'},
+                {name: 'Kaung Kaung', age: 19, gender: 'male'},
+            ]
+        }
+    },
+    methods: {
+
+    },
+    computed: {
+        boys(){
+            return this.students.filter(row => row.gender == 'male')
+        },
+        adults(){
+            return this.students.filter(row => row.age >= 18)
+        }
+    }
+})

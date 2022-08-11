@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifecycle</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <span v-if="status">Your status is true!</span>
+        <h2>{{name}}</h2>
+        <div v-if="item.length>0">
+            <img :src="item.url" alt="" v-for="item in items">
+        </div>
+    </div>
+
+    <script>
+    const mountedApp = app5.mount("#app");
+    </script>
+</body>
+</html>
